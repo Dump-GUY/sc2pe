@@ -6,8 +6,8 @@ Both 32-bit and 64-bit shellcode is supported -> resulting in 32-bit or 64-bit P
 ## Description
 It is compiled to Native AOT format to demonstrate how awesome it is (still, it was a pain as some dependency uses reflection that gets trimmed if we won't trick it :D). The [[release]](https://github.com/Dump-GUY/sc2pe/releases) binaries available to download are native binaries without any dotnet dependency! (so just run and enjoy)
 
-Native AOT compiled, using dotnet SDK 8.0.100-preview.3.23178.7
-Dotnet SDK 8+ was chosen because of producing much smaller binaries.
+Native AOT compiled, using dotnet SDK 8.0.100-preview.3.23178.7<br/>
+Dotnet SDK 8+ was chosen because of producing much smaller binaries.<br/>
 
 Native AOT compilation is supported from the dotnet 7 version.
 If you want to use dotnet 7 for building, modify the project file to target net7.0 -> building is much easier for dotnet 7.
