@@ -1,10 +1,10 @@
 # sc2pe
 Simple dotnet Native AOT app that uses [[AsmResolver]](https://github.com/Washi1337/AsmResolver) to convert shellcode to PE.<br/>
 Both 32-bit and 64-bit shellcode is supported -> resulting in 32-bit or 64-bit PE.<br/>
-Releases compiled for both linux-x64 and win-x64.<br/>
+[[Releases]](https://github.com/Dump-GUY/sc2pe/releases) are compiled for both linux-x64 and win-x64.<br/>
 
 ## Description
-It is compiled to Native AOT format to demonstrate how awesome it is (still, it was a pain as some dependency uses reflection that gets trimmed if we won't trick it :D). The release binaries available to download are native binaries without any dotnet dependency! (so just run and enjoy)
+It is compiled to Native AOT format to demonstrate how awesome it is (still, it was a pain as some dependency uses reflection that gets trimmed if we won't trick it :D). The [[release]](https://github.com/Dump-GUY/sc2pe/releases) binaries available to download are native binaries without any dotnet dependency! (so just run and enjoy)
 
 Native AOT compiled, using dotnet SDK 8.0.100-preview.3.23178.7
 Dotnet SDK 8+ was chosen because of producing much smaller binaries.
