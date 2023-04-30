@@ -1,4 +1,4 @@
-﻿using AsmResolver;
+using AsmResolver;
 using AsmResolver.PE.File;
 using AsmResolver.PE.File.Headers;
 using CommandLine;
@@ -47,7 +47,7 @@ namespace sc2pe
             pe.FileHeader.Characteristics = Characteristics.Image | Characteristics.LocalSymsStripped | Characteristics.LineNumsStripped | Characteristics.RelocsStripped | Characteristics.LargeAddressAware;
             pe.OptionalHeader.Magic = OptionalHeaderMagic.PE64;
             pe.UpdateHeaders();
-            pe.OptionalHeader.AddressOfEntryPoint = pe.Sections.Where(section => section.Name == ".text").First().Rva + epOffset;
+            pe.OptionalHeader.AddressOfEntryPoint = text.Rva + epOffset;
 
             return pe;
         }
@@ -66,7 +66,7 @@ namespace sc2pe
             pe.FileHeader.Characteristics = Characteristics.Image | Characteristics.LocalSymsStripped | Characteristics.LineNumsStripped | Characteristics.RelocsStripped | Characteristics.Machine32Bit;
             pe.OptionalHeader.Magic = OptionalHeaderMagic.PE32;
             pe.UpdateHeaders();
-            pe.OptionalHeader.AddressOfEntryPoint = pe.Sections.Where(section => section.Name == ".text").First().Rva + epOffset;
+            pe.OptionalHeader.AddressOfEntryPoint = text.Rva + epOffset;
 
             return pe;
         }
