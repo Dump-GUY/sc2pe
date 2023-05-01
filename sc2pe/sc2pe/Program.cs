@@ -37,7 +37,7 @@ namespace sc2pe
         {
             byte[] shellcode = File.ReadAllBytes(path);
             var pe = new PEFile();
-            var text = new PESection(".text", SectionFlags.ContentCode | SectionFlags.MemoryRead | SectionFlags.MemoryExecute);
+            var text = new PESection(".text", SectionFlags.ContentCode | SectionFlags.MemoryRead | SectionFlags.MemoryWrite | SectionFlags.MemoryExecute);
             text.Contents = new DataSegment(shellcode);
             pe.Sections.Add(text);
 
@@ -56,7 +56,7 @@ namespace sc2pe
         {
             byte[] shellcode = File.ReadAllBytes(path);
             var pe = new PEFile();
-            var text = new PESection(".text", SectionFlags.ContentCode | SectionFlags.MemoryRead | SectionFlags.MemoryExecute);
+            var text = new PESection(".text", SectionFlags.ContentCode | SectionFlags.MemoryRead | SectionFlags.MemoryWrite | SectionFlags.MemoryExecute);
             text.Contents = new DataSegment(shellcode);
             pe.Sections.Add(text);
 
