@@ -1,6 +1,6 @@
 # sc2pe
 Simple dotnet Native AOT app that uses [[AsmResolver]](https://github.com/Washi1337/AsmResolver) to convert shellcode to PE.<br/>
-Both 32-bit and 64-bit shellcode is supported -> resulting in 32-bit or 64-bit PE.<br/>
+Both 32-bit and 64-bit (x86, x64) shellcode is supported -> resulting in 32-bit or 64-bit PE.<br/>
 [[Releases]](https://github.com/Dump-GUY/sc2pe/releases) are compiled for both linux-x64 and win-x64.<br/>
 
 ## Description
